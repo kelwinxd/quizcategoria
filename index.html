@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+
+    <div class="telainicial">
+        <div class="headertela">
+            <h1 style="color: yellow;">QUIZ DE CATEGORIA DE JOGOS</h1>
+            <div class="info">
+                <h3>PJD - 1° Semestre</h3>
+                <h3>Kelwin e Davi</h3>
+            </div>
+          
+        </div>
+  
+    <p>Bem vindo ao Quiz, você é um <span style="color: yellow;">mago</span> que a cada resposta certa conjura magia contra o esqueleto maligno, destrua-o com seu conhecimento!</p>
+    <button>Começar Quiz</button>
+    </div>
+    <!-- rpg neles poha -->
+    <div id="quiz-container">
+        <h1 id="numbQ">Questão <span></span></h1>
+        <img id="imgQ" src="./imgs/mk92.gif" alt="">
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="answer-buttons" class="btn-container"></div>
+        </div>
+        <div class="btns">
+            <button id="attack-button" disabled>Ataque</button>
+            <button id="next-button" style="display: none;">Próxima</button>
+        </div>
+        
+        <p id="score-text"></p>
+    </div>
+    <img id="mage" src="./imgs/mage01.gif" alt="">
+    <img id="enemy" src="./imgs/enemy01.gif" alt="">
+    <img id="power" src="./imgs/powermage.gif" alt="">
+
+    <script src="script.js"></script>
+</body>
+</html>

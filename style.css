@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.telainicial {
+    background-color: #f4f4f4;
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top:100px ;
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('./imgs/inicial.png');
+    color: #fff;
+    font-family: "Pixelify Sans", sans-serif;
+    
+}
+
+.telainicial p {
+    font-size: 28px;
+    
+}
+
+.telainicial button {
+    background-color: #008CBA;
+    color: #fff;
+    font-size: 24px;
+}
+
+.headertela {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    
+}
+
+#quiz-container {
+    display: none;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    background: transparent;
+    position: relative;
+}
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#question-text {
+    font-size: 24px;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("./imgs/background.jpg");
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.selected {
+    background-color: #008CBA;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#mage {
+    position: absolute;
+   bottom: 50px;
+    left: 30%;
+    width: 200px;
+
+}
+
+#power {
+    position: absolute;
+    bottom: 50px;
+     right: 32%;
+     width: 250px;
+     display: none;
+}
+
+#enemy {
+    position: absolute;
+    bottom: 50px;
+     right: 30%;
+     width: 200px;
+     transform: scaleX(-1);
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.wrong {
+    background-color: #f44336;
+    color: white;
+}
+
+#next-button {
+    display: none;
+    background-color: #008CBA;
+    color: white;
+}
