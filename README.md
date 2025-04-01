@@ -1,3 +1,3 @@
 # quizcategoria
 
-![Texto Alternativo]("./imgs/imgquizz.png")
+![Texto Alternativo]("imgs/imgquizz.png")
