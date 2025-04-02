@@ -17,6 +17,7 @@ const scoreText = document.getElementById("score-text");
 const imgQuestion = document.getElementById("imgQ");
 const mage = document.getElementById("mage");
 const power = document.getElementById("power")
+const enemy = document.getElementById("enemy")
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -105,12 +106,34 @@ attackButton.addEventListener("click", () => {
            power.style.display = 'none'
         }, 2100);
     } else {
+        enemy.src = "./imgs/enemyat.gif"; 
+
+        const originalTransform =`${enemy.style.transform } scaleX(-1)` 
+
+        // Pegando a posição dos elementos
+        const mageRect = mage.getBoundingClientRect();
+        const enemyRect = enemy.getBoundingClientRect();
         
+        // Calculando a diferença de posição
+        const distance = (mageRect.left - enemyRect.left) + 100;
+        
+        // Aplicando a transição para o movimento
+        enemy.style.transition = "transform 0.5s ease-in-out";
+        enemy.style.transform = `translateX(${distance}px) scaleX(-1)`;
+        
+        setTimeout(() => {
+            enemy.src = "./imgs/enemy01.gif";
+            
+            // Voltando ao estado original
+            enemy.style.transform = `${originalTransform}`;
+        }, 2300);
     }
 
     nextButton.style.display = "block";
     attackButton.disabled = true;
 });
+
+
 
 function nextQuestion() {
     currentQuestionIndex++;
