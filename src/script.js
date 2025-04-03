@@ -46,7 +46,7 @@ function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     questionText.innerText = currentQuestion.question;
     imgQuestion.src = currentQuestion.img;
-    document.querySelector("#numbQ span").innerText = `${currentQuestionIndex + 1}`
+    document.querySelector("#numbQ").innerHTML = `Questão <span>${currentQuestionIndex + 1}</span>`;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -97,7 +97,14 @@ attackButton.addEventListener("click", () => {
               power.style.display = 'block'
          }, 800);
         
+         setTimeout(() => {
+            enemy.src = './imgs/enemydeath2.gif'
+         }, 2300);
 
+         setTimeout(() => {
+            enemy.style.opacity = '0'
+            enemy.classList.remove("enter")
+         }, 3000);
 
         setTimeout(() => {
             mage.src = "./imgs/mage01.gif";
@@ -105,19 +112,24 @@ attackButton.addEventListener("click", () => {
         setTimeout(() => {
            power.style.display = 'none'
         }, 2100);
+
+        setTimeout(() => {
+            enemy.src = "./imgs/enemy01.gif"
+            enemy.classList.add("enter")
+        }, 3900);
     } else {
         enemy.src = "./imgs/enemyat.gif"; 
 
         const originalTransform =`${enemy.style.transform } scaleX(-1)` 
 
-        // Pegando a posição dos elementos
+      
         const mageRect = mage.getBoundingClientRect();
         const enemyRect = enemy.getBoundingClientRect();
         
-        // Calculando a diferença de posição
+  
         const distance = (mageRect.left - enemyRect.left) + 100;
         
-        // Aplicando a transição para o movimento
+      
         enemy.style.transition = "transform 0.5s ease-in-out";
         enemy.style.transform = `translateX(${distance}px) scaleX(-1)`;
         
@@ -128,8 +140,10 @@ attackButton.addEventListener("click", () => {
             enemy.style.transform = `${originalTransform}`;
         }, 2300);
     }
-
-    nextButton.style.display = "block";
+    setTimeout(() => {
+        nextButton.style.display = "block";
+    }, 3500);
+ 
     attackButton.disabled = true;
 });
 
@@ -144,9 +158,15 @@ function nextQuestion() {
     }
 }
 
+
+
 function showScore() {
     resetState();
-    questionText.innerText = `Fim do quiz! Sua pontuação: ${score} de ${questions.length}`;
+    document.querySelector("#numbQ").innerText = `Fim do Quiz`
+    questionText.innerText = ` ${score} / ${questions.length}`;
+
+    scoreText.innerHTML = `Você eliminou <span class='dest'> ${score} caveiras malignas </span> com seu conhecimento!`
+    
     nextButton.style.display = "block";
     nextButton.innerText = "Reiniciar";
     nextButton.onclick = startQuiz;

@@ -42,6 +42,20 @@ body {
     font-size: 24px;
 }
 
+.dest {
+    color: yellow;
+}
+
+#score-text {
+    font-size: 24px;
+    color: #fff;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 .headertela {
     max-width: 90%;
     text-align: center;
@@ -52,6 +66,8 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    border-top: solid 1px #fff;
+    border-bottom: 1px solid #fff;
     
 }
 
@@ -96,6 +112,19 @@ img {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+
+@keyframes show {
+    from {
+       opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.enter {
+    animation: show forwards 1s ease ;
 }
 
 .selected {
@@ -226,6 +255,18 @@ width: 180px;
     .telainicial {
         max-width: 320px;
         margin-top:40px ;
+        padding: 15px 20px;
+    }
+
+    .telainicial h1 {
+        font-size: 30px;
+    }
+
+    .info {
+        font-size: 14px;
+        border-bottom: 1px solid #fff;
+
+        
     }
 
     .telainicial p {
