@@ -1,7 +1,7 @@
 const questions = [
     { question: "Mortal Kombat 1992 foi lançado para qual plataforma?", answers: ["Arcade", "SNES", "PlayStation", "PC"], correct: "Arcade", img: "./imgs/mk92.gif" },
     { question: "The Witcher 3 se encaixa em qual das descrições de genêros:", answers: ["Narrativa aberta com escolhas e consequências", "RPG com narrativa Linear", "Narrativa linear com escolhas e consequências", "Aventura com narrativa aberta"], correct: "Narrativa aberta com escolhas e consequências", img: "./imgs/thewitcher.gif" },
-    { question: "Quantos lados tem um triângulo?", answers: ["2", "3", "4", "5"], correct: "3", img: "./imgs/triangulo.gif" }
+   //adicione aqui mais Questões
 ];
 
 //ae poha vamo ve se agora dá certo
