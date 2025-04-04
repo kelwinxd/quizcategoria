@@ -1,5 +1,5 @@
 const questions = [
-    { question: "Mortal Kombat 1992 foi lançado para qual plataforma?", answers: ["Arcade", "SNES", "PlayStation", "PC"]},
+    { question: "Mortal Kombat 1992 foi lançado para qual plataforma?", answers: ["Arcade", "SNES", "PlayStation", "PC"], correct: "Arcade"},
     { question: "The Witcher 3 se encaixa em qual das descrições de genêros:", answers: ["Narrativa aberta com escolhas e consequências", "RPG com narrativa Linear", "Narrativa linear com escolhas e consequências", "Aventura com narrativa aberta"], correct: "Narrativa aberta com escolhas e consequências", },
    //adicione aqui mais Questões
 ];
@@ -173,7 +173,7 @@ function showScore() {
    
     document.querySelector("#numbQ").innerText = `Fim do Quiz`
     questionText.innerText = ` ${score} / ${questions.length}`;
-    imgQuestion.style.display = 'none'
+    
     scoreText.innerHTML = `Você eliminou <span class='dest'> ${score} caveiras malignas </span> com seu conhecimento!`
     
     nextButton.style.display = "block";
