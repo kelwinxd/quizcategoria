@@ -1,6 +1,6 @@
 const questions = [
-    { question: "Mortal Kombat 1992 foi lançado para qual plataforma?", answers: ["Arcade", "SNES", "PlayStation", "PC"], correct: "Arcade", img: "./imgs/mk92.gif" },
-    { question: "The Witcher 3 se encaixa em qual das descrições de genêros:", answers: ["Narrativa aberta com escolhas e consequências", "RPG com narrativa Linear", "Narrativa linear com escolhas e consequências", "Aventura com narrativa aberta"], correct: "Narrativa aberta com escolhas e consequências", img: "./imgs/thewitcher.gif" },
+    { question: "Mortal Kombat 1992 foi lançado para qual plataforma?", answers: ["Arcade", "SNES", "PlayStation", "PC"]},
+    { question: "The Witcher 3 se encaixa em qual das descrições de genêros:", answers: ["Narrativa aberta com escolhas e consequências", "RPG com narrativa Linear", "Narrativa linear com escolhas e consequências", "Aventura com narrativa aberta"], correct: "Narrativa aberta com escolhas e consequências", },
    //adicione aqui mais Questões
 ];
 
@@ -14,7 +14,7 @@ const answerButtons = document.getElementById("answer-buttons");
 const attackButton = document.getElementById("attack-button");
 const nextButton = document.getElementById("next-button");
 const scoreText = document.getElementById("score-text");
-const imgQuestion = document.getElementById("imgQ");
+//const imgQuestion = document.getElementById("imgQ");
 const mage = document.getElementById("mage");
 const power = document.getElementById("power")
 const enemy = document.getElementById("enemy")
@@ -45,8 +45,9 @@ function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     questionText.innerText = currentQuestion.question;
+    /*
     imgQuestion.src = currentQuestion.img;
-    imgQuestion.style.display = 'block'
+    imgQuestion.style.display = 'block'*/
     document.querySelector("#numbQ").innerHTML = `Questão <span>${currentQuestionIndex + 1}</span>`;
 
     currentQuestion.answers.forEach(answer => {

@@ -74,7 +74,7 @@ body {
 #quiz-container {
     display: none;
     max-width: 450px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
     background: url("./imgs/fundo3.jpg");
     background-position: bottom;
@@ -148,7 +148,7 @@ img {
 
 #mage {
     position: absolute;
-   bottom: 50px;
+   bottom: 15px;
     left: 30%;
     width: 200px;
 
@@ -164,7 +164,7 @@ img {
 
 #enemy {
     position: absolute;
-    bottom: 50px;
+    bottom: 15px;
      right: 30%;
      width: 200px;
      transform: scaleX(-1);
