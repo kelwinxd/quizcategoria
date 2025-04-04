@@ -92,6 +92,8 @@ attackButton.addEventListener("click", () => {
     if (selectedAnswer === currentQuestion.correct) {
         score++;
         mage.src = "./imgs/mage02.gif";
+     
+        
        
          setTimeout(() => {
               power.style.display = 'block'
@@ -119,6 +121,9 @@ attackButton.addEventListener("click", () => {
         }, 3900);
     } else {
         enemy.src = "./imgs/enemyat.gif"; 
+        setTimeout(() => {
+            mage.src = './imgs/magedamage.gif'
+        }, 500)
 
         const originalTransform =`${enemy.style.transform } scaleX(-1)` 
 
@@ -135,6 +140,7 @@ attackButton.addEventListener("click", () => {
         
         setTimeout(() => {
             enemy.src = "./imgs/enemy01.gif";
+            mage.src = "./imgs/mage01.gif"
             
             // Voltando ao estado original
             enemy.style.transform = `${originalTransform}`;
@@ -162,6 +168,7 @@ function nextQuestion() {
 
 function showScore() {
     resetState();
+   
     document.querySelector("#numbQ").innerText = `Fim do Quiz`
     questionText.innerText = ` ${score} / ${questions.length}`;
 
