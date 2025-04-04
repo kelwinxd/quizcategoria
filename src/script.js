@@ -46,6 +46,7 @@ function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     questionText.innerText = currentQuestion.question;
     imgQuestion.src = currentQuestion.img;
+    imgQuestion.style.display = 'block'
     document.querySelector("#numbQ").innerHTML = `Questão <span>${currentQuestionIndex + 1}</span>`;
 
     currentQuestion.answers.forEach(answer => {
@@ -171,7 +172,7 @@ function showScore() {
    
     document.querySelector("#numbQ").innerText = `Fim do Quiz`
     questionText.innerText = ` ${score} / ${questions.length}`;
-
+    imgQuestion.style.display = 'none'
     scoreText.innerHTML = `Você eliminou <span class='dest'> ${score} caveiras malignas </span> com seu conhecimento!`
     
     nextButton.style.display = "block";
