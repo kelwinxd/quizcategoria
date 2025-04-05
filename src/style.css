@@ -277,3 +277,49 @@ width: 180px;
     }
 
 }
+
+@media screen and (max-width: 400px) {
+
+#quiz-container {
+    height: 55vh;
+    padding: 10px;
+    position: relative;
+}
+
+#question-text {
+    font-size: 20px;
+}
+#answer-buttons .btn{
+    font-size: 14px;
+}
+
+
+.telainicial {
+    height: 50vh;
+    width: 300px;
+}
+
+.telainicial h1 {
+    font-size: 26px;
+}
+
+.telainicial p {
+    font-size: 20px;
+}
+
+.info {
+    font-size: 12px;
+}
+
+#mage, #enemy {
+    width: 150px;
+}
+
+.btns {
+    display: flex;
+    gap: 100px;
+position: absolute;
+bottom: -50px;
+
+}
+}
