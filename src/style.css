@@ -281,7 +281,7 @@ width: 180px;
 @media screen and (max-width: 400px) {
 
 #quiz-container {
-    height: 55vh;
+    max-height: 55vh;
     padding: 10px;
     position: relative;
 }
