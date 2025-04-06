@@ -43,7 +43,12 @@ const questions = [
         question: "Qual abordagem narrativa se adapta às escolhas do jogador, influenciando o desenrolar da história?",
         answers: ["Narrativa aberta", "Linear", "Escolhas e consequências", "Sem história clara"],
         correct: "Escolhas e consequências", img: './imgs/img09.jpeg'
-    }
+    },
+    {
+        question: "O jogo Minecraft possui qual tipo de narrativa?",
+        answers: ["Linear", "Aberta", "Escolhas", "Sem história"],
+        correct: "Sem história", img:"./imgs/img10.jpeg"
+      }
 ];
 
 //ae poha vamo ve se agora dá certo
@@ -94,11 +99,13 @@ function showQuestion() {
         imgQuestion.src = currentQuestion.img;
         imgWrapper.style.display = 'flex';
         imgQuestion.classList.add("appear");
+
     
         setTimeout(() => {
             imgWrapper.style.display = 'none';
             imgQuestion.classList.remove("appear");
-        }, 2500); // mesmo tempo da animação
+          
+        }, 3000); // mesmo tempo da animação
     }
     
     /*

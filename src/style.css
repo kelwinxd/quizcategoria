@@ -162,7 +162,7 @@ img {
 }
 
 #imgQ {
-    max-width: 80%;
+    max-width: 100%;
     max-height: 70%;
     border-radius: 12px;
     box-shadow: 0 0 15px black;
@@ -179,11 +179,11 @@ img {
     }
     50% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1.2);
     }
     100% {
         opacity: 0;
-        transform: scale(1.2);
+        transform: scale(1.5);
     }
 }
 
