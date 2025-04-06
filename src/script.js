@@ -1,7 +1,49 @@
 const questions = [
-    { question: "Mortal Kombat 1992 foi lançado para qual plataforma?", answers: ["Arcade", "SNES", "PlayStation", "PC"], correct: "Arcade"},
-    { question: "The Witcher 3 se encaixa em qual das descrições de genêros:", answers: ["Narrativa aberta com escolhas e consequências", "RPG com narrativa Linear", "Narrativa linear com escolhas e consequências", "Aventura com narrativa aberta"], correct: "Narrativa aberta com escolhas e consequências", },
-   //adicione aqui mais Questões
+    {
+        question: "A franquia Mortal Kombat pertence a qual gênero?",
+        answers: ["Ação", "Estratégia", "RPG", "Luta"],
+        correct: "Luta", img: './imgs/mkk.jpeg'
+    },
+    {
+        question: "O jogo Candy Crush pertence a qual classificação por plataformas?",
+        answers: ["Consoles", "Móvel", "PC", "Híbrido"],
+        correct: "Híbrido", img: './imgs/candy.jpg'
+    },
+    {
+        question: "O jogo Guilty Gear -Strive- pertence a qual estilo visual?",
+        answers: ["2D", "Estilizado", "3D", "Realista"],
+        correct: "Estilizado", img: './imgs/img03.gif'
+    },
+    {
+        question: "Qual destas classificações melhor se enquadra ao jogo da imagem?",
+        answers: ["Luta", "MMO", "Jogos para PC", "Battle Royale"],
+        correct: "Battle Royale", img: './imgs/img04.jpeg'
+    },
+    {
+        question: "Aponte qual jogo se enquadra como experiência imersiva e interatividade",
+        answers: ["Detroit: Become Human", "The Witcher 3", "Half-Life: Alyx", "Dark Souls"],
+        correct: "Half-Life: Alyx", img: './imgs/img05.jpeg'
+    },
+    {
+        question: "Aponte qual dos seguintes jogos é de apenas um jogador.",
+        answers: ["Dark Souls", "Devil May Cry 3", "Super Mario Galaxy", "Final Fantasy 9"],
+        correct: "Devil May Cry 3", img: './imgs/img06.jpeg'
+    },
+    {
+        question: "Qual destes jogos é um exemplo de jogo de corrida arcade?",
+        answers: ["Need for Speed", "Gran Turismo", "Mario Kart", "Forza Horizon"],
+        correct: "Mario Kart", img: './imgs/img07.jpeg'
+    },
+    {
+        question: "Qual dos seguintes jogos é um exemplo de estratégia em tempo real (RTS)?",
+        answers: ["Warcraft 3", "Civilization", "Final Fantasy", "Diablo"],
+        correct: "Warcraft 3", img: './imgs/img08.jpeg'
+    },
+    {
+        question: "Qual abordagem narrativa se adapta às escolhas do jogador, influenciando o desenrolar da história?",
+        answers: ["Narrativa aberta", "Linear", "Escolhas e consequências", "Sem história clara"],
+        correct: "Escolhas e consequências", img: './imgs/img09.jpeg'
+    }
 ];
 
 //ae poha vamo ve se agora dá certo
@@ -18,6 +60,9 @@ const scoreText = document.getElementById("score-text");
 const mage = document.getElementById("mage");
 const power = document.getElementById("power")
 const enemy = document.getElementById("enemy")
+const imgWrapper = document.getElementById("imgQ-wrapper");
+const imgQuestion = document.getElementById("imgQ");
+
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -45,6 +90,17 @@ function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     questionText.innerText = currentQuestion.question;
+    if (currentQuestion.img) {
+        imgQuestion.src = currentQuestion.img;
+        imgWrapper.style.display = 'flex';
+        imgQuestion.classList.add("appear");
+    
+        setTimeout(() => {
+            imgWrapper.style.display = 'none';
+            imgQuestion.classList.remove("appear");
+        }, 2500); // mesmo tempo da animação
+    }
+    
     /*
     imgQuestion.src = currentQuestion.img;
     imgQuestion.style.display = 'block'*/
