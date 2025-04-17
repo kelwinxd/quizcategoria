@@ -51,7 +51,7 @@ const questions = [
       }
 ];
 
-//ae poha vamo ve se agora dá certo
+
 
 const quizContainer = document.getElementById("quiz-container")
 const btnInitiate = document.querySelector(".telainicial button")
